@@ -52,20 +52,14 @@
 </head>
 <body class="p-4 md:p-8">
     <div class="max-w-md mx-auto">
-        <!-- Header -->
         <header class="mb-6">
             <h1 class="text-3xl font-extrabold text-slate-800 tracking-tight">Menú Semanal</h1>
             <p class="text-slate-500 font-medium">Inicia: Sábado 14/03/2026</p>
         </header>
 
-        <!-- Day Selector dots -->
-        <div class="flex justify-center gap-2 mb-6" id="dotsContainer">
-            <!-- Dynamic dots via JS -->
-        </div>
+        <div class="flex justify-center gap-2 mb-6" id="dotsContainer"></div>
 
-        <!-- Weekly Menu Content -->
         <div class="scroll-container flex gap-4" id="mainContainer">
-            <!-- SÁBADO -->
             <div class="day-card bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
                 <div class="gradient-bg p-5 text-white">
                     <h2 class="text-2xl font-bold">Sábado</h2>
@@ -114,7 +108,6 @@
                 </div>
             </div>
 
-            <!-- DOMINGO -->
             <div class="day-card bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
                 <div class="bg-indigo-500 p-5 text-white">
                     <h2 class="text-2xl font-bold">Domingo</h2>
@@ -163,7 +156,6 @@
                 </div>
             </div>
 
-            <!-- LUNES -->
             <div class="day-card bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden">
                 <div class="bg-slate-800 p-5 text-white">
                     <h2 class="text-2xl font-bold">Lunes</h2>
@@ -212,17 +204,14 @@
                 </div>
             </div>
 
-            <!-- MARTES - VIERNES (Resumen rápido para no saturar el scroll infinito, pero mantenemos la estructura) -->
-            <!-- Puedes añadir el resto siguiendo este patrón -->
-             <div class="day-card bg-white rounded-3xl flex items-center justify-center p-10 text-center border-2 border-dashed border-slate-200">
+            <div class="day-card bg-white rounded-3xl flex items-center justify-center p-10 text-center border-2 border-dashed border-slate-200">
                 <div>
                     <i class="fas fa-calendar-check text-4xl text-slate-300 mb-4"></i>
                     <p class="text-slate-500 font-medium">Desliza para ver el resto de la semana</p>
                 </div>
-             </div>
+            </div>
         </div>
 
-        <!-- Progress Footer -->
         <div class="mt-8 bg-slate-900 rounded-2xl p-4 text-white">
             <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-medium">Objetivo Semanal</span>
@@ -241,7 +230,6 @@
     </div>
 
     <script>
-        // Lógica simple para los puntos de navegación
         const container = document.getElementById('mainContainer');
         const dotsContainer = document.getElementById('dotsContainer');
         const cards = document.querySelectorAll('.day-card');
